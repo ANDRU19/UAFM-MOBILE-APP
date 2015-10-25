@@ -38,8 +38,8 @@
 
                 swfPath: "js/jplayer",
                 cssSelectorAncestor: "#jp_container",
-                solution:"html,flash",
-                supplied: "mp3",
+                solution:"html",
+                supplied: "mp3, m4a, oga",
                 wmode: "window",
                 keyEnabled: true,
          
