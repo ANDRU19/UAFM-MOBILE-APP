@@ -12,8 +12,8 @@
         Hello World sample application that responds to the deviceready event.
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author email="andriy.ry@gmail.com">
+        Andrew Rybachuk
     </author>
 
     <!--
@@ -47,7 +47,7 @@
     <!-- Core plugins -->
 
     <gap:plugin name="org.apache.cordova.network-information" />
-
+    <gap:plugin name="com.jamiestarke.webviewdebug" version="1.0.8" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
