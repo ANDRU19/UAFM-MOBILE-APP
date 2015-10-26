@@ -1,52 +1,25 @@
-@import url('bootstrap.min.css');
-@import url('font-awesome.min.css');
-html {height: 100%;}
-body {font-size: 13px;height: 100%;
-background: url('../img/background.png');}
-.bg { padding-top: 70px;background-position: 0 70px;}
-.top-container {position: absolute;top:0;width: 100%;background-color: #000;height:70px;}
-.logo {display:block;line-height:70px;  }
-.partner-logo {display:block; text-align: left;line-height:70px;}
-.logotype {vertical-align: middle;}
+@import url("font-awesome.min.css");
+body {background-color: #000000;}
+li {list-style: none;}
+.player {width:340px;margin:0 auto;height: 500px;vertical-align: middle;}
+#artist {width:126px; height: 126px; margin:0 auto;float:left;  background-image: url('../img/artist.png');}
+.song {color:#fff; font-size:13px; width:322px; margin:0 auto; text-align: center;font-family: "Helvetica Neue", Arial, sans-serif; height:14px;}
 .clear {clear:both;}
-.streams-block {padding: 0; min-height: 75%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 75vh;  display: flex;
-  align-items: center; }
-.streams {margin:2px 0 0 0;padding: 0;list-style: none;}
-.stream   { text-align: center;}
-.streams a {color:#C9C8CC !important; background: rgba(34,34,34,0.75);padding:15px;display: block;}
-.streams a:hover {text-decoration: none;}
-.stream>.active {background: #E83A3A;color: #fff !important;}
-.play-control, .controls {margin: 0;padding: 0;}
-#jp_container li {list-style: none;}
-#jp_container a {color:#222;text-decoration: none;}
-.jp-play, .jp-pause {display:block;background: #00c4ff;width:65px;height:65px;padding:15px;border-radius: 50%;margin:18px 0 0 0;}
-.glyphicon-play,.glyphicon-pause {font-size: 33px;padding-left: 2px;}
-.song {color:#C9C8CC;padding-top: 12px;text-align: center;width: 100%}
-.jp-volume-slider {height: 8px;margin-top:12px;margin-bottom:12px; display: block !important;width: 100%;}
+.streams {display:block; float:left; margin:37px 0 0 12px;padding:0;}
+.stream {display:block; width:67px;float:left;}
+.stream a {display: block; float: left; text-decoration: none; color:#ffffff;width:60px;  background-color: #00c4ff; text-align: center;}
+.jp-play, .jp-pause {display: block; width:90px; height:90px; background-color: #00c4ff; border-radius: 50px; text-decoration: none; margin: 0 auto;}
+.play-control {float: left;width: 100px;  margin-top: 4px;padding: 0;margin-top: 30px;}
+.fa-play {display: block;vertical-align: middle; padding:26px 0 0 33px;}
+.fa-pause {display: block;vertical-align: middle; padding:26px 0 0 28px;}
+.fa-play:before { font: normal normal normal 14px/1 FontAwesome; content: "\f04b";   color: #222222; font-size: 41px;}
+.fa-pause:before { font: normal normal normal 14px/1 FontAwesome; content: "\f04c";   color: #222222; font-size: 41px;}
+.jp-gui {float: left;  margin-top: 27px;padding:0;margin-left: 15px;height:30px;}
+.controls {padding:0;}
+.jp-volume-slider {width:190px;height: 8px; margin:0 auto; margin-bottom:12px; display: block !important;}
 .jp-volume-slider .ui-slider-handle {height:.8em;width:.8em;cursor:pointer;}
 .jp-gui.jp-no-volume .jp-volume-slider {display:none;}
 .controls>.ui-widget-content {  background-color:#333; height:8px;border-radius: 10px;}
 .controls>.ui-widget-content>.ui-widget-header { background-color:#00c4ff; height:8px;top:0px;cursor:pointer;border-radius: 10px;}
-.content-padding {margin-top:110px;}
-.content-wrapper {background-color: #fff;height:800px;    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);}
-
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-.vk:hover,.facebook:hover {color:#fff;}
-.top-social-buttons {height: 50px;width:85px;margin:0 auto;margin-top: 10px;}
-.vk {float:left;text-align:center;display:block;width:32px; height:32px;text-decoration: none;padding:6px;color:#fff;background-color: #5e82a8;margin:7px 0 0 0;    font-size: 18px;}
-.facebook {float:left;text-align:center;display:block;width:32px; height:32px;text-decoration: none;padding:6px;color:#fff; background-color: #3b5998;margin:7px 0 0 20px;    font-size: 18px;}
-.footer {  position: absolute;bottom: 0;width: 100%;height: 92px;background: rgba(34,34,34,0.75);}
+.logo {background-image: url('../img/uafm-logo.png'); width:221px; height:87px ;float:left;margin-left: 19px;margin-top: 30px;}
+.adv {width:320px;margin: 0 auto;margin-top: 20px;}
