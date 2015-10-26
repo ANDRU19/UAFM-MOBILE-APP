@@ -1,132 +1,129 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>UAFM APPLICATION</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-        <script type="text/javascript" src="http://uafm.org/js/info.js"></script>
-        <script type="text/javascript" src="http://uafm.org/js/ajax.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.js"></script>
-        <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-       <script type="text/javascript">
-    //<![CDATA[
-    $(document).ready(function() {
-        // Local copy of jQuery selectors, for performance.
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UAFM Template</title>
 
-        var my_jPlayer = $("#jquery_jplayer"),
-        	my_trackName = $("#jp_container .track-name"),
-            my_playState = $("#jp_container .play-state");
-            
-        var opt_play_first = false, 
-            opt_auto_play = true;
-        var first_track = true;
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://uafm.org/extensions/mobile-app/js/info.js"></script> 
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript">
+        function ShareToVk() {
+            tltl = document.title
+            width = 550
+            height = 268
+            description = 'Я слухаю UAFM інтернет радіо! UAFM - зроблено в Україні.'
+            image = 'http://uafm.org/img/uafm-logo.png'
+            w_top = (window.screen.height - height) / 2
+            w_left = (window.screen.width - width) / 2
+            window.open('http://vk.com/share.php?url=' + document.location.href + '&tltl=' + tltl + '&cmg=1' + '&image=' + image + '&description=' + description, 'shareSite', 'width=550px,height=268px,resizable=yes,scrollbars=yes,left=' + w_left + ',top=' + w_top);
+        }
+    </script>
+    <script type="text/javascript">
+        function ShareToFC() {
+            tltl = document.title
+            width = 600
+            height = 300
+            w_top = (window.screen.height - height) / 2
+            w_left = (window.screen.width - width) / 2
+            window.open('https://www.facebook.com/sharer/sharer.php?u=http://uafm.org', 'shareSite', 'width=550px,height=268px,resizable=yes,scrollbars=yes,left=' + w_left + ',top=' + w_top);
+        }
+    </script>
+  </head>
+  <body>
 
-            my_jPlayer.jPlayer({
-            	ready: function (event) {
-				// Hide the volume slider on mobile browsers. ie., They have no effect.
-				if(event.jPlayer.status.noVolume) {
-					// Add a class and then CSS rules deal with it.
-					$(".jp-gui").addClass("jp-no-volume");
-				}
-					$("#jp_container .track-default").click();
-			},
-				
-               volumechange: function(event) {
-                if(event.jPlayer.options.muted) {
-                    myControl.volume.slider("value", 0);
-                } else {
-                    myControl.volume.slider("value", event.jPlayer.options.volume);
-                }
-            }, 
+  	<div class="top-container">
+  	<div class="container-fluid">
+  	<div class="row">
+<div class="col-xs-4 col-md-2">
+<a class="logo" href="http://uafm.org"><img class="logotype" style="width:100%;" src="img/logo.svg"></a>
+</div>
+<div class="col-xs-4 col-md-8">
+<div class="top-social-buttons">
+<a class="vk" href="#" onclick="ShareToVk()"><i class="fa fa-vk"></i></a>
+<a class="facebook" href="#" onclick="ShareToFC()"><i class="fa fa-facebook"></i></a>
+</div>
+</div>
+<div class="col-xs-4 col-md-2">
+<a class="partner-logo" href="https://billing.domen-hosting.net/aff.php?aff=164"><img class="logotype" style="width:100%;" src="img/domain-hosting.svg"></a>
+</div>
+</div>
+</div>
+</div>
 
-                swfPath: "js/jplayer",
-                cssSelectorAncestor: "#jp_container",
-                solution:"html,flash",
-                supplied: "mp3, m4a, oga",
-                wmode: "window",
-                keyEnabled: true,
-         
-           });
-                myControl = {
-                volume: $("#jp_container" + " .jp-volume-slider")
-            },
-           
-              $("#jp_container .track").click(function(e) {
-		      my_trackName.text($(this).text());
-		      my_jPlayer.jPlayer("setMedia", {
-			  mp3: $(this).attr("href")
-		   });
-		      if((opt_play_first && first_track) || (opt_auto_play && !first_track)) {
-			  my_jPlayer.jPlayer("play");
-		   }
-		     first_track = false;
-		     $(this).blur();
-		     return false;
-	       });
-  
-             myControl.volume.slider({
-             animate: "fast",
-             max: 1,
-             range: "min",
-             step: 0.01,
-             value: $.jPlayer.prototype.options.volume,
-             slide: function(event, ui) {
-             my_jPlayer.jPlayer("option", "muted", false);
-             my_jPlayer.jPlayer("option", "volume", ui.value);
-           }
-           });
-          });
-   
+<div class="bg">
+  <div class="container-fluid">
 
-    //]]>
-</script>
 
-    </head>
-    <body>
-    <div class="parent">
-    <div class="player">
+<div class="row">
+<div class="col-xs-3 col-md-1 streams-block">
 
-           
-        <div id="jquery_jplayer"></div>
-        <div id="artist"></div>
-        <div class="song"></div>
-        <div id="jp_container" class="container">
-
-            <ul class="streams">
+<ul class="streams">
                 <li class="stream"><a href="http://live.uafm.org:9001/uafm" class="track track-default">128</a></li>
                 <li class="stream"><a href="http://live.uafm.org:9001/UAFM" class="track">96</a></li>
                 <li class="stream"><a href="http://live.uafm.org:9001/uafm_aac" class="track">64</a></li>
             </ul>
-            <div class="jp-gui ui-widget ui-widget-content ui-corner-all">
+
+</div>
+
+
+
+
+
+
+</div> 
+</div> 
+
+
+ 
+<footer class="footer">
+      <div class="container-fluid">
+      
+
+   <div id="jquery_jplayer"></div>
+       
+        <div id="jp_container">
+<div class="col-xs-3 col-md-4">
+                      
+            <ul class="play-control">
+             <li><a class="jp-play" href="#"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></li>
+              <li><a class="jp-pause" href="#"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></a></li>
+            </ul>
+ 
+     </div>
+     <div class="col-xs-9 col-md-8">
+     <div class="row">
+     <div class="col-xs-12 col-sm-6">
+      <div class="song"></div>
+      </div>
+   </div>
+   <div class="row">
+   <div class="col-xs-12 col-sm-6">
+<div class="jp-gui ui-widget ui-widget-content ui-corner-all">
                 <ul class="controls">
                 <div class="jp-volume-slider"></div>
                 </ul> 
             </div>
-            <div class="clear"></div>
-            <ul class="play-control">
-             <li><a class="jp-play" href="#"><i class="fa fa-play"></i></a></li>
-              <li><a class="jp-pause" href="#"><i class="fa fa-pause"></i></a></li>
-            </ul>
-            <div class="logo"></div>
-            <div class="clear"></div>
-            <div class="adv">
-            	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- UAFM_APP -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:320px;height:100px"
-                 data-ad-client="ca-pub-8642259672643280"
-                 data-ad-slot="1457221142"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            	
             </div>
-             </div>
-             </div>
-              <div class="helper"></div>
-             </div>
-        </body>
-    </html>
+
+            </div>
+ </div>
+
+
+
+</div>
+
+
+     
+    </footer>
+   </div> 
+
+<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
