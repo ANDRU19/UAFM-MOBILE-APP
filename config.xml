@@ -58,7 +58,7 @@
 
     <!-- Define app icon for each platform. -->
     
-  <gap:plugin name="com.jp.whitelistplugin" version="1.1.2" />
+ <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
  <feature name="http://api.phonegap.com/1.0/network" />
 
