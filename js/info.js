@@ -13,7 +13,7 @@ function artistInfo(artist_info) {
 		dataType: "xml",
 		error: function() {
 			$(".bg").css({
-				"background": "url(" + logo + ")",
+				"background-image": "url(" + logo + ")",
 				"background-repeat": "no-repeat",
 				"height": "100%",
 				"background-position": "center center"
@@ -29,7 +29,7 @@ function artistInfo(artist_info) {
 		if (item =='undefined' || artist_info[0] =='Domen' || item == "") {
 			
 				$(".bg").css({
-				"background": "url(" + logo + ")",
+				"background-image": "url(" + logo + ")",
 				"background-repeat": "no-repeat",
 				"height": "100%",
 				"background-position": "center center"
@@ -37,7 +37,7 @@ function artistInfo(artist_info) {
 
 		} else {
 				$(".bg").css({
-				"background": "url(" + item + ")",
+				"background-image": "url(" + item + ")",
 				"background-repeat": "no-repeat",
 				"height": "100%",
 				"background-position": "center center"
@@ -66,9 +66,9 @@ function parseMusic(data) {
 	
 
 // If there the same artis then no reason to update function of prsing artist photo
-	if ($(".song").text() !== artist_info[2]) {
+	//if ($(".song").text() !== artist_info[2]) {
 		artistInfo(artist_info);
-	}
+	//}
 
 	$(".song").text(data[mount].title);
 //	$("#listeners").text(data[mount].listeners);
