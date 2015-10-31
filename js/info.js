@@ -13,7 +13,7 @@ function artistInfo(artist_info) {
 		dataType: "xml",
 		error: function() {
 			$(".bg").css({
-				"background-image": "url(" + logo + ")",
+				"background": "url(" + logo + ")",
 				"background-repeat": "no-repeat",
 				"height": "100%",
 				"background-position": "center center"
@@ -29,7 +29,7 @@ function artistInfo(artist_info) {
 		if (item =='undefined' || artist_info[0] =='Domen' || item == "") {
 			
 				$(".bg").css({
-				"background-image": "url(" + logo + ")",
+				"background": "url(" + logo + ")",
 				"background-repeat": "no-repeat",
 				"height": "100%",
 				"background-position": "center center"
@@ -37,7 +37,7 @@ function artistInfo(artist_info) {
 
 		} else {
 				$(".bg").css({
-				"background-image": "url(" + item + ")",
+				"background": "url(" + item + ")",
 				"background-repeat": "no-repeat",
 				"height": "100%",
 				"background-position": "center center"
