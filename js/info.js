@@ -22,7 +22,8 @@ function artistInfo(artist_info) {
 
 	}).done(function(xml) {
 		$xml = $(xml);
-			item = $xml.find('image[size="mega"]')[0].innerHTML;
+	
+			item = $xml.find('image[size="mega"]')[0].textContent;
 		
 		// If there no any photo from API, paste radio logo instead
 
