@@ -1,7 +1,8 @@
 @import url('bootstrap.min.css');
 @import url('font-awesome.min.css');
+@font-face {font-family: Roboto; src: url('../fonts/Roboto-Regular-webfont.woff'); src:url('../fonts/Roboto-Regular-webfont.svg#roboto') format('svg'), }
 html { height: 100%; }
-body { font-size: 13px; height: 100%; background: url('../img/background.png'); overflow: hidden; }
+body { font-size: 13px; height: 100%; background: url('../img/background.png'); overflow: hidden; font-family: Roboto; }
 .bg { padding-top: 70px; background-position: 0 70px; }
 .top-container { position: absolute; top: 0; width: 100%; background-color: #000; height: 70px; }
 .logo { display: block; line-height: 70px; }
