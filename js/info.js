@@ -27,7 +27,7 @@ function artistInfo(artist_info) {
 		
 		// If there no any photo from API, paste radio logo instead
 
-		if (item =='undefined' || artist_info[0] =='Domen' || item == "") {
+		if (item =='undefined' || artist_info[0] =='Domen' || item == "" || item == "http://img2-ak.lst.fm/i/u/7b9d2d919c5645bab9cf568194df958d.png") {
 			
 				$(".bg").css({
 				"background-image": "url(" + logo + ")",

@@ -42,7 +42,7 @@
                 supplied: "mp3, m4a, oga",
                 wmode: "window",
                 keyEnabled: true,
-         
+         		volume: "1",
            });
                 myControl = {
                 volume: $("#jp_container" + " .jp-volume-slider")
@@ -67,7 +67,7 @@
              max: 1,
              range: "min",
              step: 0.01,
-             value: $.jPlayer.prototype.options.volume,
+             value: 1,
              slide: function(event, ui) {
              my_jPlayer.jPlayer("option", "muted", false);
              my_jPlayer.jPlayer("option", "volume", ui.value);
